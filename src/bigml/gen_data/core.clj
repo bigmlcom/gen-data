@@ -1,3 +1,6 @@
+;; Copyright 2016 BigML
+;; Licensed under the Apache License, Version 2.0
+;; http://www.apache.org/licenses/LICENSE-2.0
 (ns bigml.gen-data.core
   (:import (java.util Random))
   (:require (clojure.data [csv :as csv])
@@ -18,17 +21,11 @@
   (let [^Random rng (seed->rng seed)]
     #(.nextGaussian rng)))
 
-(defn- uniform-generator [seed]
-  (let [rng (seed->rng seed)]
-    #(dec (* 2 (random/next-double! rng)))))
-
 (defn- take1! [coll rng]
   (coll (random/next-int! rng (count coll))))
 
 (def base-generators
-  [guassian-generator
-   ;; uniform-generator
-   ])
+  [guassian-generator])
 
 (defn- rand-vector! [cols rng]
   (vec (repeatedly cols #(dec (* 2 (random/next-double! rng))))))
