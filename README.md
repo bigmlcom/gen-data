@@ -12,11 +12,11 @@ lein run -file foo.csv -classes 100 -fields 20 -rows 10000 -seed foo
 
 The possible parameters for a `lein run` task are:
 
-  - file : The output file.
-  - classes : The number of classes (with associated clusters) in the data.
-  - fields : The number of numeric fields the data.
-  - hidden-fields : The number of hidden fields. The hidden fields are
-                   part of the projected clusters, but not visible in
-                   the final data.
-  - rows : The number of rows.
-  - seed : A seed for random number generator.
+  - *-file* : The output file.
+  - *-classes* : The number of classes (with associated clusters) in the data.
+  - *-fields* : The number of numeric fields the data.
+  - *-hidden-fields* : The number of hidden fields. The hidden fields
+                       are part of the projected clusters, but not
+                       visible in the final data.
+  - *-rows* : The number of rows.
+  - *-seed* : A seed for random number generator.
