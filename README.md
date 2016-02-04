@@ -1,4 +1,4 @@
-# data-gen
+# gen-data
 
 A tiny project to generate synthetic data.  Each class will be
 representd by a randomly projected and translated gaussian.  Example
